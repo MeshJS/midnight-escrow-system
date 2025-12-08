@@ -1,6 +1,6 @@
-# Escrow Contract
+# Escrow System
 
-**Escrow System on Midnight Network**
+** Built on Midnight Network**
 
 ## Quick Start
 
