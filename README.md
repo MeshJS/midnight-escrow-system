@@ -19,7 +19,25 @@ cd packages/cli
 
 This downloads all required ZK parameters (k=10 to k=17) to `.cache/midnight/zk-params/`.
 
-### 3. Build All Packages
+### 3. Configure Environment Variables
+
+#### For Testnet:
+
+```sh
+cd packages/ui
+echo "VITE_NETWORK_ID=TestNet
+VITE_LOGGING_LEVEL=trace" > .env
+```
+
+#### For Standalone/Undeployed:
+
+```sh
+cd packages/ui
+echo "VITE_NETWORK_ID=Undeployed
+VITE_LOGGING_LEVEL=trace" > .env
+```
+
+### 4. Build All Packages
 
 ```sh
 yarn build:all
@@ -27,7 +45,7 @@ yarn build:all
 
 This compiles the contract, builds the API, and builds the UI.
 
-### 4. Start Infrastructure
+### 5. Start Infrastructure
 
 Choose one option:
 
@@ -50,24 +68,6 @@ docker compose -f standalone.yml up
 - Indexer: `8088`
 - Proof Server: `6300`
 
-### 5. Configure Environment Variables
-
-#### For Testnet:
-
-```sh
-cd packages/ui
-echo "VITE_NETWORK_ID=TestNet
-VITE_LOGGING_LEVEL=trace" > .env
-```
-
-#### For Standalone/Undeployed:
-
-```sh
-cd packages/ui
-echo "VITE_NETWORK_ID=Undeployed
-VITE_LOGGING_LEVEL=trace" > .env
-```
-
 ### 6. Configure Wallet
 
 - Open **Midnight Lace Wallet**
@@ -81,6 +81,7 @@ VITE_LOGGING_LEVEL=trace" > .env
 If using standalone, fund your wallet address:
 
 ```sh
+cd packages/cli
 yarn fund mn_shield-addr_undeployed...
 ```
 
