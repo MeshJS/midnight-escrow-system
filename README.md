@@ -126,3 +126,15 @@ escrow/
 - The contract uses an empty private state
 - Treasury is managed using `QualifiedCoinInfo`
 - Contract address already deployed on TestNet: `020027a770b658fc040c3435fdf5f59b90c2b3430911d76ef52cd0017a087b8c7984`
+
+---
+
+<div align="center">
+  <p>
+    <a href="https://meshjs.dev/"><img src="packages/ui/public/images/mesh-logo.svg" alt="MeshJS Logo" width="30" height="20" style="vertical-align: middle;" /></a>
+    <strong> × </strong>
+    <a href="https://socious.io/"><img src="packages/ui/public/images/socious-logo.svg" alt="Socious Logo" width="28" height="32" style="vertical-align: middle;" /></a>
+  </p>
+  <p>Powered by <a href="https://meshjs.dev/">MeshJS</a> in partnership with <a href="https://socious.io/">Socious</a></p>
+  <p>Built with ❤️ on Midnight Network</p>
+</div>
