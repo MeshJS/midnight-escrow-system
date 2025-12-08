@@ -1,6 +1,6 @@
 # Escrow System
 
-** Built on Midnight Network**
+**Built on Midnight Network**
 
 ## Quick Start
 
