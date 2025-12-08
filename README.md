@@ -133,7 +133,7 @@ escrow/
   <p>
     <a href="https://meshjs.dev/"><img src="packages/ui/public/images/mesh-logo.svg" alt="MeshJS Logo" width="30" height="20" style="vertical-align: middle;" /></a>
     <strong> × </strong>
-    <a href="https://socious.io/"><img src="packages/ui/public/images/socious-logo.svg" alt="Socious Logo" width="28" height="32" style="vertical-align: middle;" /></a>
+    <a href="https://socious.io/"><img src="packages/ui/public/images/socious-logo.svg" alt="Socious Logo" width="18" height="20" style="vertical-align: middle;" /></a>
   </p>
   <p>Powered by <a href="https://meshjs.dev/">MeshJS</a> in partnership with <a href="https://socious.io/">Socious</a></p>
   <p>Built with ❤️ on Midnight Network</p>
