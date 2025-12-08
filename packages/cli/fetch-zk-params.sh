@@ -6,7 +6,7 @@ set -x  # print each command before executing
 
 # Default CIRCUIT_PARAM_RANGE if not provided
 CIRCUIT_PARAM_RANGE=${CIRCUIT_PARAM_RANGE:-"10 11 12 13 14 15 16 17"}
-ZK_PARAMS_DIR=${ZK_PARAMS_DIR:-"../.cache/midnight/zk-params"}
+ZK_PARAMS_DIR=${ZK_PARAMS_DIR:-"../../.cache/midnight/zk-params"}
 
 # Create target directory
 mkdir -p "$ZK_PARAMS_DIR/zswap/4"
@@ -27,3 +27,6 @@ for file in \
   echo "  ↳ $file"
   curl -sSLO "https://midnight-s3-fileshare-dev-eu-west-1.s3.eu-west-1.amazonaws.com/zswap/4/$file"
 done
+
+echo "✅ ZK params downloaded successfully!"
+

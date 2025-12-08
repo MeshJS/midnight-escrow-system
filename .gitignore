@@ -37,6 +37,9 @@ dist/
 **/public/keys/
 **/public/zkir/
 
+# ZK Params cache (downloaded by fetch-zk-params.sh)
+.cache/midnight/
+
 # ZK Keys and proofs (large binary files)
 *.prover
 *.verifier

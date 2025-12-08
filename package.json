@@ -6,7 +6,12 @@
     "build": "turbo run build",
     "build:all": "cd packages/contract && yarn compact && npx turbo run build && cd ../api && npx turbo run build && cd ../ui && npx turbo run build",
     "clean": "turbo run clean",
-    "clean:cache": "rm -rf .turbo && rm -rf node_modules/.cache"
+    "clean:cache": "rm -rf .turbo && rm -rf node_modules/.cache",
+    "infra:up": "cd packages/cli && docker compose -f standalone.yml up -d",
+    "infra:down": "cd packages/cli && docker compose -f standalone.yml down",
+    "infra:logs": "cd packages/cli && docker compose -f standalone.yml logs -f",
+    "infra:fetch-zk": "cd packages/cli && sh fetch-zk-params.sh",
+    "fund": "yarn workspace @escrow/escrow-cli fund"
   },
   "private": true,
   "resolutions": {
@@ -53,4 +58,3 @@
     "packages/contract"
   ]
 }
-
