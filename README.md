@@ -100,7 +100,6 @@ yarn build:all       # Build everything
 yarn infra:up        # Start standalone infrastructure
 yarn infra:down      # Stop standalone infrastructure
 yarn infra:logs      # View infrastructure logs
-yarn infra:fetch-zk  # Download ZK parameters
 yarn fund <address>  # Fund wallet (standalone mode)
 ```
 

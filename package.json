@@ -10,7 +10,6 @@
     "infra:up": "cd packages/cli && docker compose -f standalone.yml up -d",
     "infra:down": "cd packages/cli && docker compose -f standalone.yml down",
     "infra:logs": "cd packages/cli && docker compose -f standalone.yml logs -f",
-    "infra:fetch-zk": "cd packages/cli && sh fetch-zk-params.sh",
     "fund": "yarn workspace @escrow/escrow-cli fund"
   },
   "private": true,
