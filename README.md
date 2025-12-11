@@ -2,6 +2,28 @@
 
 **Built on Midnight Network**
 
+## About
+
+This is a decentralized escrow system built on the Midnight Network using Compact smart contracts. The escrow contract enables secure, trustless transactions by holding funds in escrow until conditions are met.
+
+### Key Features
+
+- **Create Escrows**: Deposit funds and assign them to a contributor using their `ZswapCoinPublicKey` address
+- **Release Funds**: Release escrowed funds to the designated contributor
+- **State Management**: Track escrow status (active, released, refunded)
+- **Privacy-Preserving**: Built on Midnight Network with zero-knowledge proofs for transaction privacy
+- **Treasury Management**: Secure fund storage using `QualifiedCoinInfo`
+
+### How It Works
+
+1. **Create**: A user creates an escrow by depositing funds and specifying a contributor address. The contract stores the funds in its treasury and assigns a unique escrow ID.
+
+2. **Release**: When conditions are met, the escrow can be released, transferring the funds to the designated contributor address.
+
+3. **State Tracking**: Each escrow maintains its state (active → released), allowing for transparent tracking of all escrow transactions.
+
+The contract uses an empty private state and manages all funds through a treasury system, ensuring secure and transparent escrow operations on the Midnight Network.
+
 ## Quick Start
 
 ### 1. Install Dependencies
@@ -120,12 +142,18 @@ escrow/
 └── .cache/           # ZK params (gitignored)
 ```
 
-## Notes
+## License
 
-- Contributor addresses must be `ZswapCoinPublicKey` format (32 bytes, hex string)
-- The contract uses an empty private state
-- Treasury is managed using `QualifiedCoinInfo`
-- Contract address already deployed on TestNet: `020027a770b658fc040c3435fdf5f59b90c2b3430911d76ef52cd0017a087b8c7984`
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+We welcome contributions! Please follow these guidelines:
+
+1. **Fork the repository** and create a feature branch
+2. **Make your changes** following the existing code style
+3. **Test thoroughly** - ensure all builds pass and the contract works as expected
+4. **Submit a pull request** with a clear description of your changes
 
 ---
 
