@@ -1,10 +1,6 @@
-# Escrow System
+# Midnight Escrow System
 
-**Built on Midnight Network**
-
-## About
-
-This is a decentralized escrow system built on the Midnight Network using Compact smart contracts. The escrow contract enables secure, trustless transactions by holding funds in escrow until conditions are met.
+Decentralized escrow system built on the Midnight Network using Compact smart contracts. The escrow contract enables secure, trustless transactions by holding funds in escrow until conditions are met.
 
 ### Key Features
 
@@ -22,8 +18,6 @@ This is a decentralized escrow system built on the Midnight Network using Compac
 
 3. **State Tracking**: Each escrow maintains its state (active → released), allowing for transparent tracking of all escrow transactions.
 
-The contract uses an empty private state and manages all funds through a treasury system, ensuring secure and transparent escrow operations on the Midnight Network.
-
 ## Quick Start
 
 ### 1. Install Dependencies
@@ -34,8 +28,13 @@ yarn install
 
 ### 2. Fetch ZK Parameters
 
+- Navigate to the `cli` folder:
 ```sh
 cd packages/cli
+```
+
+- Run zk-params script for proof server:
+```sh
 ./fetch-zk-params.sh
 ```
 
@@ -45,16 +44,26 @@ This downloads all required ZK parameters (k=10 to k=17) to `.cache/midnight/zk-
 
 #### For Testnet:
 
+- Navigate to the `ui` folder
 ```sh
 cd packages/ui
+```
+
+- Add the `.env` variables
+```sh
 echo "VITE_NETWORK_ID=TestNet
 VITE_LOGGING_LEVEL=trace" > .env
 ```
 
-#### For Standalone/Undeployed:
+#### For Standalone (Local Development):
 
+- Navigate to the `ui` folder
 ```sh
 cd packages/ui
+```
+
+- Add the `.env` variables (use `Undeployed` as the Network ID for local development)
+```sh
 echo "VITE_NETWORK_ID=Undeployed
 VITE_LOGGING_LEVEL=trace" > .env
 ```
@@ -74,15 +83,13 @@ Choose one option:
 #### Option A: Testnet (connects to Midnight public testnet)
 
 ```sh
-cd packages/cli
-docker compose -f testnet.yml up
+cd packages/cli && docker compose -f testnet.yml up
 ```
 
-#### Option B: Standalone/Local (runs your own local network)
+#### Option B: Standalone (runs your own local network)
 
 ```sh
-cd packages/cli
-docker compose -f standalone.yml up
+cd packages/cli && docker compose -f standalone.yml up
 ```
 
 **Ports:**
@@ -96,22 +103,27 @@ docker compose -f standalone.yml up
 - Go to **Settings** → **Network**
 - Select:
   - **TestNet** for Option A
-  - **Undeployed** for Option B (standalone)
+  - **Undeployed** for Option B (Standalone infrastructure)
 
 ### 7. Fund Wallet (Standalone only)
 
-If using standalone, fund your wallet address:
+If using Standalone infrastructure, fund your wallet address:
 
+- Go to the `cli` folder:
 ```sh
 cd packages/cli
+```
+
+- Run the `fund` command to receive Midnight test tokens (tDUST), replace `mn_shield-addr_undeployed...` with your Undeployed network address:
+
+```sh
 yarn fund mn_shield-addr_undeployed...
 ```
 
 ### 8. Start Development Server
 
 ```sh
-cd packages/ui
-yarn start
+cd packages/ui && yarn start
 ```
 
 Open `http://localhost:8080` in your browser.
