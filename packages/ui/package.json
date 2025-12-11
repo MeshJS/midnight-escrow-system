@@ -7,7 +7,7 @@
     "dev": "vite",
     "start": "http-server --port 0 ./dist",
     "build": "tsc && vite build --mode testnet && mkdir -p ./dist/keys && cp -r ../contract/dist/managed/escrow/keys/* ./dist/keys/ && mkdir -p ./dist/zkir && cp -r ../contract/dist/managed/escrow/zkir/* ./dist/zkir/",
-    "predev": "mkdir -p public/keys && cp -r ../contract/dist/managed/escrow/keys/* public/keys/ 2>/dev/null || true",
+    "prestart": "mkdir -p public/keys && cp -r ../contract/dist/managed/escrow/keys/* public/keys/ 2>/dev/null || true",
     "lint": "eslint .",
     "preview": "vite preview"
   },
