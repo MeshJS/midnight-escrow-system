@@ -1,3 +1,5 @@
+// Copyright 2025 Brick Towers
+
 /**
  * Fund a Midnight wallet address with native tokens
  * Usage: yarn fund <receiverAddress>
@@ -11,7 +13,7 @@ import { pino } from 'pino';
 import type { PrettyOptions } from 'pino-pretty';
 
 const DEFAULT_LOG_LEVEL = process.env.LOG_LEVEL ?? 'info';
-const TRANSFER_AMOUNT = 1_000_000_000_000n; // 1e12 (1 DUST)
+const TRANSFER_AMOUNT = 1_000_000_000_000n; // 1e12 (1,000,000 DUST)
 
 function getReceiverAddressFromArgs(): string {
   const [, , address] = process.argv;
