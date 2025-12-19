@@ -1,4 +1,4 @@
-# Copyright 2025 Brick Towers
+// Copyright 2025 Brick Towers
 /**
  * Fund a Midnight wallet address with native tokens
  * Usage: yarn fund <receiverAddress>
