@@ -161,10 +161,8 @@ This project reuses and adapts components from upstream open-source work by Bric
 In particular:
 - The CLI funding utility and related infrastructure scripts are derived from the Brick Towers **midnight-local-network** project:
   https://github.com/bricktowers/midnight-local-network
-- Fixes and adaptations related to the Midnight proof server are derived from Brick Towers' **midnight-proof-server** project:
-  https://github.com/bricktowers/midnight-proof-server
 
-These upstream projects are licensed under the MIT License. The original copyright and permission notices are preserved in the relevant source files, in accordance with the license terms.
+These upstream project is licensed under the MIT License. The original copyright and permission notices are preserved in the relevant source files, in accordance with the license terms.
 
 ## License
 
