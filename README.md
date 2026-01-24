@@ -107,19 +107,33 @@ cd packages/cli && docker compose -f standalone.yml up
   - **TestNet** for Option A
   - **Undeployed** for Option B (Standalone infrastructure)
 
-### 7. Fund Wallet (Standalone only)
+#### Lace Wallet (Other versions)
 
-If using Standalone infrastructure, fund your wallet address:
+If you hit issues with Preview, install the legacy Lace Wallet extension:
+
+1. Sign in to download:
+   - [Lace Wallet versions](https://chrome-stats.com/d/hgeekaiplokcnmakghbdfbgnlfheichg/download)
+
+2. Download `.crx` version **2.34.0**.
+3. In Chrome, open `chrome://extensions`.
+4. Enable **Developer mode** (top-right).
+5. Click **Load unpacked** and select the extracted extension folder.
+
+After installing, set the Lace Wallet to **Undeployed** and set the Proof Server to **Local**.
+
+### 7. Deposit to Wallet (Standalone only)
+
+If using Standalone infrastructure, deposit to your wallet address:
 
 - Go to the `cli` folder:
 ```sh
 cd packages/cli
 ```
 
-- Run the `fund` command to receive Midnight test tokens (tDUST), replace `mn_shield-addr_undeployed...` with your Undeployed network address:
+- Run the `deposit` command to receive Midnight test tokens (tDUST), replace `mn_shield-addr_undeployed...` with your Undeployed network address:
 
 ```sh
-yarn fund mn_shield-addr_undeployed...
+yarn deposit mn_shield-addr_undeployed...
 ```
 
 ### 8. Start Development Server
@@ -133,11 +147,8 @@ Open `http://localhost:8080` in your browser.
 ## Root Scripts
 
 ```sh
-yarn build:all       # Build everything
-yarn infra:up        # Start standalone infrastructure
-yarn infra:down      # Stop standalone infrastructure
-yarn infra:logs      # View infrastructure logs
-yarn fund <address>  # Fund wallet (standalone mode)
+yarn build:all                        # Build everything
+yarn deposit <receiverAddress>        # Deposit to wallet (standalone mode)
 ```
 
 ## Project Structure
@@ -155,16 +166,6 @@ escrow/
 ├── compact/          # Compact compiler
 └── .cache/           # ZK params (gitignored)
 ```
-
-## Attribution
-
-This project reuses and adapts components from upstream open-source work by Brick Towers.
-
-In particular:
-- The CLI funding utility and related infrastructure scripts are derived from the Brick Towers **midnight-local-network** project:
-  https://github.com/bricktowers/midnight-local-network
-
-These upstream project is licensed under the MIT License. The original copyright and permission notices are preserved in the relevant source files, in accordance with the license terms.
 
 ## License
 

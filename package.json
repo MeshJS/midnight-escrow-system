@@ -10,7 +10,7 @@
     "infra:up": "cd packages/cli && docker compose -f standalone.yml up -d",
     "infra:down": "cd packages/cli && docker compose -f standalone.yml down",
     "infra:logs": "cd packages/cli && docker compose -f standalone.yml logs -f",
-    "fund": "yarn workspace @escrow/escrow-cli fund"
+    "deposit": "yarn workspace @escrow/escrow-cli deposit"
   },
   "private": true,
   "resolutions": {

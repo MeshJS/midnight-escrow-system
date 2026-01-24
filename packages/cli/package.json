@@ -6,8 +6,8 @@
   "type": "module",
   "packageManager": "yarn@4.9.2",
   "scripts": {
-    "fund": "tsx src/fund.ts",
-    "build": "rm -rf dist && tsc --project tsconfig.build.json"
+    "build": "rm -rf dist && tsc --project tsconfig.build.json",
+    "deposit": "tsx src/deposit.ts"
   },
   "dependencies": {
     "@midnight-ntwrk/compact-runtime": "^0.8.1",
