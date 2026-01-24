@@ -76,6 +76,8 @@ yarn build:all
 
 This compiles the contract, builds the API, and builds the UI.
 
+> **Note:** This project uses Compact 0.24.0 for contract compilation.
+
 ### 5. Start Infrastructure
 
 Choose one option:
