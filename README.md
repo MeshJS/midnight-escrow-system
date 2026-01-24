@@ -156,6 +156,16 @@ escrow/
 └── .cache/           # ZK params (gitignored)
 ```
 
+## Attribution
+
+This project reuses and adapts components from upstream open-source work by Brick Towers.
+
+In particular:
+- The CLI funding utility and related infrastructure scripts are derived from the Brick Towers **midnight-local-network** project:
+  https://github.com/bricktowers/midnight-local-network
+
+These upstream project is licensed under the MIT License. The original copyright and permission notices are preserved in the relevant source files, in accordance with the license terms.
+
 ## License
 
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.

@@ -1,3 +1,5 @@
+// Copyright 2025 Brick Towers
+
 import { type Config, StandaloneConfig } from './config.js';
 import * as Rx from 'rxjs';
 import { nativeToken } from '@midnight-ntwrk/ledger';
